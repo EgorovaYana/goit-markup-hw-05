@@ -330,13 +330,12 @@ button {
   font-size: 12px;
   line-height: 2;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 16px;
 }
 .footer-form ::placeholder {
   color: var(--sub-text-color);
   font-size: 12px;
   line-height: 2;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04em;
 }
 .footer-form-input:focus {
   border-color: var(--second-brand-color);
@@ -585,6 +584,7 @@ button {
   line-height: 1.17;
   margin-bottom: 4px;
   letter-spacing: 0.04em;
+  display: block;
 }
 .modal-form-input-wrap {
   position: relative;
@@ -603,7 +603,7 @@ button {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 12px;
   line-height: 1.16;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04em;
   color: var(--first-brand-color);
 }
 .modal-input-svg {
@@ -632,16 +632,18 @@ button {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   resize: none;
   font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.48px;
-  color: var(--first-brand-color);
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+.modal-form-textarea-box {
   margin-bottom: 16px;
 }
 .modal-form ::placeholder {
   color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
   line-height: 1.16;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04em;
 }
 .modal-form-button {
   padding: 16px 32px;
@@ -652,18 +654,17 @@ button {
   border: none;
   margin: 0 auto;
   font-weight: 500;
-  letter-spacing: 0.64px;
-  width: 169px;
+  letter-spacing: 0.04em;
+  min-width: 169px;
+  height: 56px;
   display: block;
+  cursor: pointer;
 }
 .checkbox-box {
   margin-bottom: 24px;
 }
 .checkbox-box .modal-form-label {
   margin-bottom: 0;
-}
-.modal-form-checkbox {
-  display: none;
 }
 .modal-form-label-checkbox {
   display: flex;
@@ -676,11 +677,14 @@ button {
   width: 16px;
   height: 16px;
   outline: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  fill: transparent;
 }
 .modal-form-label-checkbox a {
   color: var(--second-brand-color);
@@ -690,11 +694,5 @@ button {
 .modal-form-checkbox:checked + .modal-form-label-checkbox span {
   background-color: var(--fifth-brand-color);
   border: none;
-}
-.modal-checkbox-svg {
-  fill: transparent;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form-checkbox:checked + .modal-form-label-checkbox .modal-checkbox-svg {
   fill: var(--sub-text-color);
 }
