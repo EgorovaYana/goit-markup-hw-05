@@ -300,7 +300,9 @@ button {
 .social-item-link:hover,
 .social-item-link:focus,
 .footer-form-button:hover,
-.footer-form-button:focus {
+.footer-form-button:focus,
+.modal-form-button:hover,
+.modal-form-button:focus {
   background-color: var(--fifth-brand-color);
 }
 .footer-social-list .social-item-link:hover,
@@ -324,11 +326,12 @@ button {
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid var(--main-bg-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background-color: transparent;
   color: var(--sub-text-color);
   font-size: 12px;
-  line-height: 2;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form ::placeholder {
@@ -347,7 +350,6 @@ button {
   color: var(--sub-text-color);
   border: none;
   display: flex;
-  gap: 16px;
   align-items: center;
   justify-content: center;
   padding: 8px 24px;
@@ -359,6 +361,7 @@ button {
 }
 .footer-form-button svg {
   fill: var(--main-bg-color);
+  margin-left: 16px;
 }
 .footer-form-label {
   color: var(--sub-text-color);
@@ -659,6 +662,8 @@ button {
   height: 56px;
   display: block;
   cursor: pointer;
+  line-height: 1.5;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-box {
   margin-bottom: 24px;
@@ -670,7 +675,7 @@ button {
   display: flex;
   align-items: center;
 }
-.modal-form-label-checkbox span {
+.modal-checkbox-span {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
@@ -686,13 +691,13 @@ button {
   justify-content: center;
   fill: transparent;
 }
-.modal-form-label-checkbox a {
+.modal-checkbox-link {
   color: var(--second-brand-color);
   text-decoration: underline;
   margin-left: 3px;
 }
-.modal-form-checkbox:checked + .modal-form-label-checkbox span {
+.modal-form-checkbox:checked + .modal-checkbox-span {
   background-color: var(--fifth-brand-color);
   border: none;
-  fill: var(--sub-text-color);
+  fill: var(--third-brand-color);
 }
