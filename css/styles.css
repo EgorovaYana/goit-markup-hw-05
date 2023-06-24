@@ -671,10 +671,6 @@ button {
 .checkbox-box .modal-form-label {
   margin-bottom: 0;
 }
-.modal-form-label-checkbox {
-  display: flex;
-  align-items: center;
-}
 .modal-checkbox-span {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -696,7 +692,7 @@ button {
   text-decoration: underline;
   margin-left: 3px;
 }
-.modal-form-checkbox:checked + .modal-checkbox-span {
+.modal-form-checkbox:checked + .modal-form-label > .modal-checkbox-span {
   background-color: var(--fifth-brand-color);
   border: none;
   fill: var(--third-brand-color);
